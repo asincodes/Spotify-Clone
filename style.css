@@ -1,0 +1,194 @@
+body {
+    background-color: #081a17;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 10px;
+    padding: 10px;
+}
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+.brand img {
+    height: 50px;
+    padding: 0 20px;
+    width: 50px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul li {
+    padding: 0% 20px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    min-height: 670px;
+    background-color: rgb(24, 28, 32);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+.bottom {
+    position: sticky;
+    height: 70px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myprogressbar {
+    width: 80%;
+    cursor: pointer;
+}
+
+.songitem {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    gap: 5px;
+    cursor: pointer;
+    flex-direction: row;
+    width: 100%;
+    background-color: #252424;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.songitem span {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+}
+
+.songitem img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+/* FIX: push play button and timestamp to the right */
+.songlistplay {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: white;
+    margin: 0 23px;
+}
+
+.songitem i {
+    cursor: pointer;
+}
+
+/* FIX: highlight the currently playing song */
+.songitem.active {
+    background-color: #1db954;
+    color: black;
+}
+
+/* FIX: song info in bottom bar */
+.songinfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 20px;
+}
+
+#songcover {
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.songbanner {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(18, 21, 24);
+    border-radius: 10px;
+    margin: 0 20px;
+    
+}
+
+#bannercover {
+    width: 320px;
+    height: 320px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    display: none; /* hidden until a song is played */
+}
+
+#bannercover.visible {
+    display: block;
+}
+
+.about {
+    background-color: rgb(18, 21, 24);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px 60px;
+    border-top: 1px solid #333;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1db954;
+}
+
+.about p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #b3b3b3;
+    max-width: 800px;
+    margin-bottom: 15px;
+}
+
+.about p strong {
+    color: white;
+}
